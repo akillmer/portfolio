@@ -45,7 +45,16 @@
   }
 
   h2 {
-    color: rgb(63, 63, 63);
+    color: rgba(63, 63, 63, 0.9);
+    padding-bottom: 0.5em;
+    border-bottom: solid 1px rgba(63, 63, 63, 0.2);
+    margin-bottom: 0;
+
+    i {
+      float: right;
+      font-size: 1.4em;
+      opacity: 0.7;
+    }
   }
 }
 </style>
@@ -115,7 +124,7 @@ export default {
   },
   methods: {
     updateBoxSizes() {
-      this.height = this.$refs[this.contentRef].scrollHeight + 10;
+      this.height = this.$refs[this.contentRef].scrollHeight + 40;
     }
   }
 };
