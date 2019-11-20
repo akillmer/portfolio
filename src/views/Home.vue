@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <DropTitle style="margin-left: 1em;" :img="require('../assets/Aloha.png')" alt="Aloha, I'm Andy" />
+    <DropTitle :img="require('../assets/Aloha.png')" alt="Aloha, I'm Andy" />
     <Content title="I'm a full-stack developer from Aiea, Hawaii" :sequence="0">
       <p>
         Aloha, my name's Andy and I prefer calling myself a

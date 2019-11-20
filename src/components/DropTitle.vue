@@ -11,7 +11,7 @@
 
 .drop-title {
   overflow: hidden;
-  margin-bottom: -2em;
+  margin: 1em 0 -5em 0;
   text-align: center;
 
   @media #{$landscape} {
