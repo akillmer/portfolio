@@ -13,10 +13,10 @@
   visibility: hidden;
   overflow: hidden;
   height: 1px;
-  padding: 0 2em 0 2em;
+  padding: 0 36px 0 36px; // bottom value gets added to margin-bottom on exit animation
   border-radius: 4px;
   transition: all 1s ease-in-out; // animated height and paddings
-  margin-bottom: 3em;
+  margin-bottom: 54px; // gets added to computed height value on exit animation
 
   @media #{$landscape} {
     border-top-right-radius: 0;
@@ -102,12 +102,20 @@ export default {
   },
   computed: {
     expandedStyle() {
-      return this.isRevealed && this.showContent
-        ? `visibility: visible;
+      if (this.isRevealed && this.showContent)
+        // enter animation state
+        return `visibility: visible;
           height: ${this.height}px;
-          padding-top: 1em; 
-          padding-bottom: 1em;`
-        : "";
+          padding-top: 18px; 
+          padding-bottom: 18px;`;
+      else if (!this.isRevealed && this.showContent) {
+        // exit animation state
+        return `margin-bottom: ${this.height +
+          /* padding: */ 36 +
+          /* margin: */ 54}px`;
+      }
+
+      return "";
     },
     bgColor() {
       let color = this.accent === "orange" ? "#f8cf82;" : "#fff";
@@ -124,7 +132,7 @@ export default {
   },
   methods: {
     updateBoxSizes() {
-      this.height = this.$refs[this.contentRef].scrollHeight + 40;
+      this.height = this.$refs[this.contentRef].clientHeight + 40;
     }
   }
 };
