@@ -1,32 +1,33 @@
 <template>
-  <div id="nav" ref="nav" @click="showMenu" :class="{ expand: isExpanded }">
-    <div :class="{ overlay: isExpanded }" ref="overlay"></div>
+  <div id="nav" ref="nav" :class="{ expand: isExpanded }">
+    <div :class="{'touch-tab': !isExpanded}" @click="toggleMenu"></div>
+    <div :class="{ overlay: isExpanded }" ref="overlay" @click="toggleMenu"></div>
     <ul>
-      <li>
-        <router-link :style="boxShadowStyle" to="/" alt="Home">
+      <router-link :style="boxShadowStyle" to="/" alt="Home">
+        <li @click="hideMenu">
           <i class="fas fa-home"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link :style="boxShadowStyle" to="/skills" alt="Skills">
+        </li>
+      </router-link>
+      <router-link :style="boxShadowStyle" to="/skills" alt="Skills">
+        <li @click="hideMenu">
           <i class="fas fa-pencil-ruler"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link :style="boxShadowStyle" to="/work" alt="Work">
+        </li>
+      </router-link>
+      <router-link :style="boxShadowStyle" to="/work" alt="Work">
+        <li @click="hideMenu">
           <i class="fas fa-folder"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link :style="boxShadowStyle" to="/about" alt="About">
+        </li>
+      </router-link>
+      <router-link :style="boxShadowStyle" to="/about" alt="About">
+        <li @click="hideMenu">
           <i class="fas fa-user-circle"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link :style="boxShadowStyle" to="/contact" alt="Contact">
+        </li>
+      </router-link>
+      <router-link :style="boxShadowStyle" to="/contact" alt="Contact">
+        <li @click="hideMenu">
           <i class="fas fa-comment-alt"></i>
-        </router-link>
-      </li>
+        </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -44,6 +45,19 @@
   height: 100vh;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.touch-tab {
+  visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  top: 0;
+  right: 0;
+
+  @media #{$portrait} {
+    visibility: visible;
+  }
 }
 
 #nav {
@@ -66,13 +80,19 @@
   }
 
   @media #{$portrait} {
-    background-color: #fafafa;
-    padding-right: 2em;
+    background-color: rgb(126, 107, 80, 0.3);
+    backdrop-filter: blur(2px);
+    padding: 1em 2em 0 0;
     border-radius: 0 10px 10px 0;
     left: -92px;
     transition: all 0.5s ease-in-out;
+
+    a {
+      margin-bottom: 2em !important;
+    }
   }
 
+  // with a short view port the nav needs to be adjusted to remain in the center
   @media screen and (max-height: 420px) {
     padding-top: 1em;
   }
@@ -133,7 +153,7 @@ export default {
     }
   },
   methods: {
-    showMenu() {
+    toggleMenu() {
       let bounds = this.$refs.nav.getBoundingClientRect();
       this.isExpanded = !this.isExpanded && bounds.x < -24;
       // when expanded (left: -24px)
