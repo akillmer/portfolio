@@ -1,6 +1,5 @@
 <template>
   <div class="container" :style="bgColor + boxShadow + expandedStyle">
-    <h1 v-if="title !== undefined" :ref="titleRef">{{ title }}</h1>
     <div :class="{ content: true, fade: showContent }" :ref="contentRef">
       <slot />
     </div>
@@ -34,6 +33,20 @@
     line-height: 2em;
     text-align: justify;
   }
+
+  h1 {
+    display: inline-block;
+    color: #fafafa;
+    text-shadow: 2px 2px #e69a2a;
+    text-align: center;
+    border-bottom: dashed 2px #b99249;
+    padding-bottom: 0.5em;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: rgb(63, 63, 63);
+  }
 }
 </style>
 
@@ -46,7 +59,6 @@ export default {
   mixins: [Reveal],
   props: {
     sequence: Number,
-    title: String,
     accent: {
       type: String,
       default: "orange",
@@ -76,7 +88,6 @@ export default {
       loaded: false,
       showContent: false,
       height: 1,
-      titleRef: `${this._uid}_title`,
       contentRef: `${this._uid}_content`
     };
   },
@@ -104,13 +115,7 @@ export default {
   },
   methods: {
     updateBoxSizes() {
-      let titleHeight = 0;
-      let contentHeight = this.$refs[this.contentRef].scrollHeight;
-
-      if (this.title !== undefined)
-        titleHeight = this.$refs[this.titleRef].scrollHeight + 60; // adjusted for padding
-
-      this.height = titleHeight + contentHeight;
+      this.height = this.$refs[this.contentRef].scrollHeight + 10;
     }
   }
 };
