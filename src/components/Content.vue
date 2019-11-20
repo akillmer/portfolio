@@ -21,12 +21,14 @@
   @media #{$landscape} {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    transition: none;
   }
 
   @media #{$portrait} {
     border-radius: 0;
     box-shadow: none !important; // override style
     border-bottom: solid 20px; // color is set via computed boxShadow per accent color
+    transition: none;
   }
 
   .content {
