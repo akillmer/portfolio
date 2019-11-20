@@ -11,11 +11,16 @@
 
 .drop-title {
   overflow: hidden;
-  margin: 4em 0 -5em 0;
+  margin-bottom: -5em;
   text-align: center;
 
   @media #{$landscape} {
     padding: 1em;
+    margin: -5em 0 -4em 0;
+  }
+
+  @media #{$portrait} {
+    margin-bottom: -3em;
   }
 
   img {

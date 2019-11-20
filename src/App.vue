@@ -19,13 +19,13 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 1.3em;
   color: #524328;
-  margin: 0;
+  margin: 5em 0 8em 0;
 }
 
 #app {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2em 0 1em;
+  padding: 0 2em 0 1em; // slightly offset because of box-shadow
 
   @media #{$windowed} {
     padding-left: 6em;
