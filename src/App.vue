@@ -16,6 +16,7 @@ html {
 
 body {
   background-image: url("./assets/background.png");
+  background-attachment: fixed;
   font-family: "Public Sans", sans-serif;
   font-size: 1.3em;
   color: #524328;
@@ -41,10 +42,9 @@ body {
 }
 
 a {
-  color: #333;
   text-decoration: none;
   border-bottom: 1px dashed black;
-  text-shadow: 1px 1px black;
+  // colors determined by Content's accent color
 }
 
 // don't style linked icons

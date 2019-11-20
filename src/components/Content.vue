@@ -1,6 +1,9 @@
 <template>
   <div class="container" :style="bgColor + boxShadow + expandedStyle">
-    <div :class="{ content: true, fade: showContent }" :ref="contentRef">
+    <div
+      :class="{ content: true, fade: showContent, 'white-theme': (accent === 'white') }"
+      :ref="contentRef"
+    >
       <slot />
     </div>
   </div>
@@ -34,6 +37,18 @@
   .content {
     line-height: 2em;
     text-align: justify;
+  }
+
+  a {
+    color: #ffffff;
+    text-shadow: 1px 1px #c08020;
+  }
+
+  .white-theme {
+    a {
+      color: #c96610;
+      text-shadow: none;
+    }
   }
 
   h1 {
