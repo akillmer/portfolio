@@ -20,6 +20,7 @@
   border-radius: 4px;
   transition: all 1s ease-in-out; // animated height and paddings
   margin-bottom: 54px; // gets added to computed height value on exit animation
+  z-index: -1;
 
   @media #{$landscape} {
     border-top-right-radius: 0;

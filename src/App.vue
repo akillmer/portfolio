@@ -54,6 +54,40 @@ a i {
   border-bottom: none;
   text-shadow: none;
 }
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+
+  @media #{$windowed-narrow} {
+    display: block;
+  }
+
+  img {
+    margin-top: 1em;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .left-col {
+    flex-grow: 1;
+    max-width: 50%;
+    margin-right: 1em;
+
+    @media #{$windowed-narrow} {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .right-col {
+    flex-grow: 1;
+    margin-left: 1em;
+    @media #{$windowed-narrow} {
+      margin-left: 0;
+    }
+  }
+}
 </style>
 
 <script>

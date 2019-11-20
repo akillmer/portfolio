@@ -31,7 +31,7 @@
         <router-link to="/contact">in touch</router-link>&nbsp;with you. Thanks.
       </p>
     </Content>
-    <div class="gallery">
+    <div class="two-columns">
       <Content class="left-col" :sequence="1" accent="white">
         <h2>
           Riptide, client and server
@@ -76,7 +76,7 @@
             >repository for this website</a>, built with Vue.js and SCSS.
           </p>
         </Content>
-        <Content class="gallery-item" :sequence="2.2">
+        <Content :sequence="2.2">
           <h2>
             Let's talk
             <i class="far fa-envelope"></i>
@@ -133,38 +133,6 @@
     @media #{$windowed-narrow} {
       float: none;
       margin: 1em auto;
-    }
-  }
-
-  .gallery {
-    display: flex;
-    justify-content: space-between;
-
-    @media #{$windowed-narrow} {
-      display: block;
-    }
-
-    img {
-      margin-top: 1em;
-      width: 100%;
-      border-radius: 4px;
-    }
-
-    .left-col {
-      max-width: 50%;
-      margin-right: 1em;
-
-      @media #{$windowed-narrow} {
-        max-width: 100%;
-        margin-right: 0;
-      }
-    }
-
-    .right-col {
-      margin-left: 1em;
-      @media #{$windowed-narrow} {
-        margin-left: 0;
-      }
     }
   }
 }
