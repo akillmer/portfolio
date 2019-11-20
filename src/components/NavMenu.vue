@@ -51,6 +51,7 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 100;
 
   @media #{$windowed} {
     font-size: 0.8em;
