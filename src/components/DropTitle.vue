@@ -10,6 +10,8 @@
 @import "@/media.scss";
 
 .drop-title {
+  z-index: 1;
+  position: relative;
   overflow: hidden;
   margin-bottom: -5em;
   text-align: center;

@@ -20,7 +20,6 @@
   border-radius: 4px;
   transition: all 1s ease-in-out; // animated height and paddings
   margin-bottom: 54px; // gets added to computed height value on exit animation
-  z-index: -1;
 
   @media #{$landscape} {
     border-top-right-radius: 0;
@@ -71,8 +70,8 @@
     i {
       float: right;
       font-size: 1.4em;
-      color: #91bed4;
-      opacity: 0.4;
+      color: #333;
+      opacity: 0.2;
     }
   }
 }
