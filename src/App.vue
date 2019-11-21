@@ -18,7 +18,7 @@ body {
   background-image: url("./assets/background.png");
   background-attachment: fixed;
   font-family: "Public Sans", sans-serif;
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: #524328;
   margin: 5em 0 8em 0;
 }

@@ -71,7 +71,8 @@
     i {
       float: right;
       font-size: 1.4em;
-      opacity: 0.7;
+      color: #91bed4;
+      opacity: 0.4;
     }
   }
 }
