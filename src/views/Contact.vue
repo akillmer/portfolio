@@ -44,6 +44,7 @@
               :disabled="isSending || success"
               type="text"
               placeholder="Your Name"
+              maxlength="64"
             />
           </label>
           <label for="from-email">
@@ -56,6 +57,7 @@
               :disabled="isSending || success"
               type="text"
               placeholder="Your Email"
+              maxlength="64"
             />
           </label>
           <textarea
@@ -63,6 +65,7 @@
             :class="{'missing-message': !validMessage}"
             :disabled="isSending || success"
             :placeholder="messagePlaceholder"
+            maxlength="500"
           />
           <button
             v-if="validRecaptcha && !hasError && !success"
