@@ -2,7 +2,7 @@
   <div class="skills">
     <DropTitle :img="require('../assets/Skills.png')" alt="My Skills" />
     <div class="two-columns">
-      <div class="left-col" style="width:50%;">
+      <div class="left-col" style="min-width:50%;">
         <Content :sequence="0" accent="white">
           <h2>
             Front End
@@ -18,23 +18,22 @@
               <span style="background-color:#81C91E;">6 Years</span>
             </li>
             <li>
-              <i class="fab fa-sass" style="color:#C76394;"></i>Sass / SCSS
-              <span style="background-color:#C76394;">4 Years</span>
-            </li>
-
-            <li>
               <i class="fab fa-react" style="color:#16AABF;"></i>React
               <span style="background-color:#16AABF;">3 years</span>
             </li>
             <li>
               <i class="fab fa-vuejs" style="color:#41B883;"></i>Vue.js / Nuxt.js
-              <span style="background-color:#41B883;">3 years</span>
+              <span style="background-color:#41B883;">2 years</span>
+            </li>
+            <li>
+              <i class="fab fa-sass" style="color:#C76394;"></i>Sass / SCSS
+              <span style="background-color:#C76394;">2 Years</span>
             </li>
           </ul>
-          <p class="note">
+          <Note>
             I pretty much stopped working with React since I started up with Vue.js, and this year
             I started doing professional work with Nuxt.js.
-          </p>
+          </Note>
         </Content>
         <Content :sequence="1" accent="white">
           <h2>
@@ -47,6 +46,10 @@
               <span style="background-color:#4D4D4D;">4 years</span>
             </li>
             <li>
+              <i class="fab fa-git-alt" style="color:#F54D27;"></i> Git SCM
+              <span style="background-color:#F54D27;">4 years</span>
+            </li>
+            <li>
               <i class="fab fa-google" style="color:#F8B801;"></i> Google Cloud
               <span style="background-color:#F8B801;">3 years</span>
             </li>
@@ -55,13 +58,13 @@
               <span style="background-color:#5AC9E3;">3 years</span>
             </li>
           </ul>
-          <p class="note">
+          <Note>
             I'm comfortable with Node.js, PHP, and some Python for back end work, but Go has been my
             <em>go</em> to lately.
-          </p>
+          </Note>
         </Content>
       </div>
-      <div class="right-col" style="width:50%;">
+      <div class="right-col" style="min-width:50%;">
         <Content :sequence="0.5" accent="white">
           <h2>
             Design
@@ -143,14 +146,14 @@
                   <path d="M0,0v485h485V0H0z M455,455H30V30h425V455z" />
                   <g>
                     <path
-                      class="st0"
+                      class="xd-stroke"
                       d="M258.2,126.7l-57.6,106.1l61.8,112.9c1.2,2,0.8,3.3-1.2,3.7h-38.7c-2.4,0-4-0.9-4.8-2.7L173.6,260h-0.3
 			l-43.2,86.7c-0.8,1.8-2.1,2.7-3.9,2.7H89.3c-0.6,0-1.1-0.2-1.4-0.5c-0.3-0.3-0.5-0.8-0.5-1.4c0-0.6,0.2-1.1,0.6-1.5l61.2-110.1
 			L90.5,125.7c-0.4-0.7-0.4-1.3-0.1-1.9c0.3-0.6,0.8-0.8,1.6-0.8h38.4c2,0,3.3,0.8,3.9,2.4l42,85.7h0.3l41.4-85.7
 			c0.8-1.6,2.1-2.4,3.9-2.4h34.8C258.9,123,259.4,124.3,258.2,126.7z"
                     />
                     <path
-                      class="st0"
+                      class="xd-stroke"
                       d="M335.3,352.8c-23.2,0-41.9-7.2-56-21.6c-14.1-14.4-21.2-35.5-21.2-63.4c0-25.2,7.5-45.9,22.7-62.4
 			c15.1-16.4,35.3-24.6,60.8-24.6c7,0,12.6,0.7,16.8,2v-76.1c0-1.6,0.7-2.4,2.1-2.4h34.2c1.2,0,1.8,0.7,1.8,2v205
 			c0,3.9,0.3,11.6,0.9,23.1c0.2,1.6-0.4,2.6-1.8,3.1C377,347.7,356.9,352.8,335.3,352.8z M358.4,317.4v-103
@@ -168,26 +171,20 @@
               <span style="background-color:#F6AE00;">1 year</span>
             </li>
           </ul>
-          <p class="note">
+          <Note>
             I want to get better at Xd or Sketch, especially for when it's time to collaborate with others.
             But Photoshop has always been my main tool for designing.
-          </p>
+          </Note>
         </Content>
         <Content :sequence="1.5">
-          <h2>One more thing</h2>
+          <h2>
+            The most important skill
+            <i class="fab fa-stack-overflow"></i>
+          </h2>
           <p>
-            In 2019 I started writing copy professionally for third party marketing campaigns. I am also a member
-            of
-            <a
-              href="https://academy.all3dp.com/"
-              alt="All3DP's Content Academy"
-            >All3DP's Content Academy</a>.
-            I continue to learn a lot about communicating effectively, as well as the research and
-            psychology involved for producing effective copy.
-          </p>
-          <p>
-            See the
-            <router-link to="/work" alt="Work">landing pages</router-link>&nbsp;I designed for Go Hawaii Tours.
+            Perhaps my strongest skill is finding answers quickly. It's impossible to commit everything to memory
+            so I often rely on Google and the fine users at Stack Overflow to keep the ball rolling. I never shy from
+            learning something new or from finding a better way to do things.
           </p>
         </Content>
       </div>
@@ -198,13 +195,11 @@
 <style lang="scss">
 @import "@/media.scss";
 
-#xd-icon {
-  /* I created the Xd icon, it needed to be thicker to match the others */
-  .st0 {
-    stroke: #f829bd;
-    stroke-width: 8;
-    stroke-miterlimit: 10;
-  }
+/* I created the Xd icon, it needed to be thicker to match the others */
+.xd-stroke {
+  stroke: #f829bd;
+  stroke-width: 10px;
+  stroke-miterlimit: 10;
 }
 
 .skills {
@@ -223,13 +218,6 @@
     @media screen and (max-width: 650px) {
       display: none;
     }
-  }
-
-  .note {
-    font-size: 0.9em;
-    line-height: 1.5em;
-    margin-top: 2em;
-    color: #999;
   }
 
   ul {
@@ -277,12 +265,14 @@
 <script>
 import Content from "@/components/Content";
 import DropTitle from "@/components/DropTitle";
+import Note from "@/components/Note";
 
 export default {
   name: "Skills",
   components: {
     Content,
-    DropTitle
+    DropTitle,
+    Note
   }
 };
 </script>
