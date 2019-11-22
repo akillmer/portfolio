@@ -10,24 +10,19 @@
           </h2>
           <ul>
             <li>
-              <i class="fab fa-html5" style="color:#F16429;"></i>HTML / CSS
-              <span style="background-color:#F16429;">SINCE 1995</span>
+              <i class="fab fa-html5" style="color:#F16429;"></i>HTML, CSS
             </li>
             <li>
               <i class="fab fa-node-js" style="color:#81C91E;"></i>JavaScript / Node.js
-              <span style="background-color:#81C91E;">6 Years</span>
             </li>
             <li>
               <i class="fab fa-react" style="color:#16AABF;"></i>React
-              <span style="background-color:#16AABF;">3 years</span>
             </li>
             <li>
-              <i class="fab fa-vuejs" style="color:#41B883;"></i>Vue.js / Nuxt.js
-              <span style="background-color:#41B883;">2 years</span>
+              <i class="fab fa-vuejs" style="color:#41B883;"></i>Vue.js, Nuxt.js
             </li>
             <li>
-              <i class="fab fa-sass" style="color:#C76394;"></i>Sass / SCSS
-              <span style="background-color:#C76394;">2 Years</span>
+              <i class="fab fa-sass" style="color:#C76394;"></i>Sass, SCSS
             </li>
           </ul>
           <Note>
@@ -35,37 +30,8 @@
             I started doing professional work with Nuxt.js.
           </Note>
         </Content>
+
         <Content :sequence="1" accent="white">
-          <h2>
-            Back End
-            <i class="fas fa-terminal"></i>
-          </h2>
-          <ul>
-            <li>
-              <i class="fab fa-linux" style="color:#4D4D4D;"></i> Linux (Debian)
-              <span style="background-color:#4D4D4D;">4 years</span>
-            </li>
-            <li>
-              <i class="fab fa-git-alt" style="color:#F54D27;"></i> Git SCM
-              <span style="background-color:#F54D27;">4 years</span>
-            </li>
-            <li>
-              <i class="fab fa-google" style="color:#F8B801;"></i> Google Cloud
-              <span style="background-color:#F8B801;">3 years</span>
-            </li>
-            <li>
-              <img src="../assets/skills/go.png" /> Go
-              <span style="background-color:#5AC9E3;">3 years</span>
-            </li>
-          </ul>
-          <Note>
-            I'm comfortable with Node.js, PHP, and some Python for back end work, but Go has been my
-            <em>go</em> to lately.
-          </Note>
-        </Content>
-      </div>
-      <div class="right-col" style="min-width:50%;">
-        <Content :sequence="0.5" accent="white">
           <h2>
             Design
             <i class="fas fa-layer-group"></i>
@@ -101,7 +67,6 @@
                 </g>
               </svg>
               Photoshop
-              <span style="background-color:#05C8FF;">Since 2002</span>
             </li>
             <li>
               <svg
@@ -128,7 +93,6 @@
                   <path d="M0,0v485h485V0H0z M455,455H30V30h425V455z" />
                 </g>
               </svg> Illustrator
-              <span style="background-color:#FF7C01;">2 years</span>
             </li>
             <li>
               <svg
@@ -164,11 +128,9 @@
                 </g>
               </svg>
               Xd
-              <span style="background-color:#f829bd;">1 year</span>
             </li>
             <li>
               <i class="fab fa-sketch" style="color:#F6AE00;"></i> Sketch
-              <span style="background-color:#F6AE00;">1 year</span>
             </li>
           </ul>
           <Note>
@@ -176,15 +138,47 @@
             But Photoshop has always been my main tool for designing.
           </Note>
         </Content>
+      </div>
+      <div class="right-col" style="min-width:50%;">
+        <Content :sequence="0.5" accent="white">
+          <h2>
+            Back End
+            <i class="fas fa-terminal"></i>
+          </h2>
+          <ul>
+            <li>
+              <i class="fab fa-linux" style="color:#4D4D4D;"></i> Linux (Debian)
+            </li>
+            <li>
+              <i class="fab fa-git-alt" style="color:#F54D27;"></i> Git SCM
+            </li>
+            <li>
+              <i class="fab fa-google" style="color:#F8B801;"></i> Google Cloud
+            </li>
+            <li>
+              <i class="fas fa-database" style="color:#C9872B;"></i> MySQL, NoSQL
+            </li>
+            <li>
+              <img src="../assets/skills/go.png" /> Go
+            </li>
+            <li>
+              <i class="fab fa-php" style="color:#8892BF;"></i> PHP
+            </li>
+          </ul>
+          <Note>
+            I'm comfortable with Node.js, PHP, and some Python for back end work, but Go has been my
+            <em>go</em> to lately.
+          </Note>
+        </Content>
+
         <Content :sequence="1.5">
           <h2>
-            The most important skill
+            Let me Google that for you
             <i class="fab fa-stack-overflow"></i>
           </h2>
           <p>
-            Perhaps my strongest skill is finding answers quickly. It's impossible to commit everything to memory
-            so I often rely on Google and the fine users at Stack Overflow to keep the ball rolling. I never shy from
-            learning something new or from finding a better way to do things.
+            My strongest skill is finding answers quickly. I often rely on Google, and inevitably Stack Overflow,
+            to keep the ball rolling. I never shy from learning something new or finding a better way to do things.
           </p>
         </Content>
       </div>
@@ -243,6 +237,11 @@
         padding-left: 2.1em;
         margin-right: 2.2em;
         vertical-align: bottom;
+
+        @media #{$portrait} {
+          margin-left: 0.4em;
+          margin-right: 2.6em;
+        }
       }
 
       // the go icon, png
@@ -252,6 +251,11 @@
         padding-right: 1.8em;
         margin-bottom: -0.5em;
         margin-top: -0.5em;
+
+        @media #{$portrait} {
+          margin-left: 0.3em;
+          margin-right: 0.4em;
+        }
       }
 
       @media #{$portrait} {

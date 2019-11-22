@@ -82,10 +82,8 @@
             <i class="far fa-envelope"></i>
           </h2>
           <p>
-            Could your team use a person like me? Reach me any time at
-            <a
-              href="mailto:andy@mixplate.io"
-            >andy@mixplate.io</a>.
+            Could your team use a person like me? I could use a team like yours.
+            <router-link to="/contact">Contact me</router-link>.
           </p>
         </Content>
       </div>
@@ -114,8 +112,8 @@
       content: "";
       clip-path: circle(50% at center);
       background-color: rgba(255, 255, 255, 0.5);
-      width: 320px;
-      height: 320px;
+      width: 300px;
+      height: 300px;
       display: block;
       position: absolute;
       right: -10px;
@@ -124,7 +122,7 @@
 
     img {
       clip-path: circle(50% at center);
-      width: 300px;
+      width: 280px;
       display: block;
       float: right;
       margin: 1em 0 1em 2em;

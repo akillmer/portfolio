@@ -23,7 +23,7 @@
             <a
               href="https://github.com/akillmer/cloudmail"
               alt="cloudmail repo"
-            >github.com/akillmer/cloudmail</a>!
+            >github.com/akillmer/cloudmail</a>.
           </p>
         </Content>
       </div>
