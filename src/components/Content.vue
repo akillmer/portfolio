@@ -13,6 +13,7 @@
 @import "@/media.scss";
 
 .container {
+  position: relative;
   visibility: hidden;
   overflow: hidden;
   height: 1px;
@@ -35,8 +36,11 @@
   }
 
   .content {
+    z-index: 1;
+    position: absolute;
     line-height: 2em;
     text-align: justify;
+    padding-right: inherit;
   }
 
   a {
@@ -56,8 +60,6 @@
     color: #fafafa;
     text-shadow: 2px 2px #e69a2a;
     text-align: center;
-    border-bottom: dashed 2px #b99249;
-    padding-bottom: 0.5em;
     margin-bottom: 0;
   }
 
@@ -72,6 +74,10 @@
       font-size: 1.4em;
       color: #333;
       opacity: 0.2;
+
+      @media #{$portrait} {
+        display: none;
+      }
     }
   }
 }
@@ -150,7 +156,7 @@ export default {
   },
   methods: {
     updateBoxSizes() {
-      this.height = this.$refs[this.contentRef].clientHeight + 40;
+      this.height = this.$refs[this.contentRef].clientHeight;
     }
   }
 };
