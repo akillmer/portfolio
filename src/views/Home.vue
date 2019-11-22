@@ -53,7 +53,7 @@
           >server</a> with Go.
         </p>
         <p>
-          To learn more check out my
+          To learn more check out my latest
           <router-link to="/work" alt="Work">work and projects</router-link>.
         </p>
       </Content>
@@ -119,7 +119,7 @@
       display: block;
       position: absolute;
       right: -10px;
-      top: 10px;
+      top: 8px;
     }
 
     img {
@@ -131,8 +131,18 @@
     }
 
     @media #{$windowed-narrow} {
-      float: none;
-      margin: 1em auto;
+      position: default;
+
+      &:before {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10px;
+      }
+
+      img {
+        float: none;
+        margin: 1em auto;
+      }
     }
   }
 }
