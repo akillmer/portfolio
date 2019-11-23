@@ -39,13 +39,16 @@
     z-index: 1;
     position: absolute;
     line-height: 2em;
-    text-align: justify;
     padding-right: inherit;
   }
 
   a {
     color: #ffffff;
     text-shadow: 1px 1px #c08020;
+  }
+
+  p {
+    text-align: justify;
   }
 
   .white-theme {
@@ -59,8 +62,11 @@
     display: inline-block;
     color: #fafafa;
     text-shadow: 2px 2px #e69a2a;
-    text-align: center;
     margin-bottom: 0;
+
+    @media #{$portrait} {
+      text-align: center;
+    }
   }
 
   h2 {
