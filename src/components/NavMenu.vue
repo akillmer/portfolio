@@ -82,13 +82,17 @@
   @media #{$portrait} {
     background-color: rgb(126, 107, 80, 0.3);
     backdrop-filter: blur(2px);
-    padding: 1em 2em 0 0;
+    padding: 1.5em 2em 0 0.5em;
     border-radius: 0 10px 10px 0;
-    left: -92px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    left: -90px;
     transition: all 0.5s ease-in-out;
 
     a {
+      padding: 0.25em;
+      border: solid 1px rgba(0, 0, 0, 0.3) !important;
       margin-bottom: 2em !important;
+      box-shadow: none !important;
     }
   }
 
