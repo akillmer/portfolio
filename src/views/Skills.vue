@@ -277,6 +277,10 @@ export default {
     Content,
     DropTitle,
     Note
+  },
+  mounted() {
+    document.title = "Skills - Mixplate.io";
+    this.$ga.page("/skills");
   }
 };
 </script>

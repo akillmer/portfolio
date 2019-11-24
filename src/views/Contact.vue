@@ -258,6 +258,10 @@ export default {
     DropTitle,
     VueRecaptcha
   },
+  mounted() {
+    document.title = "Contact - Mixplate.io";
+    this.$ga.page("/contact");
+  },
   data() {
     return {
       sitekey: "6Lef1sMUAAAAAHxAJ7M_chloXQNSR3h-O43WMa_H",

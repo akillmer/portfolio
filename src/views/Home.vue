@@ -155,6 +155,10 @@ export default {
   components: {
     Content,
     DropTitle
+  },
+  mounted() {
+    document.title = "Andrew Killmer's Portfolio - Mixplate.io";
+    this.$ga.page("/");
   }
 };
 </script>

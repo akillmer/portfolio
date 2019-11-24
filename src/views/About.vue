@@ -55,6 +55,10 @@ export default {
   components: {
     Content,
     DropTitle
+  },
+  mounted() {
+    document.title = "About - Mixplate.io";
+    this.$ga.page("/about");
   }
 };
 </script>

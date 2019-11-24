@@ -120,6 +120,10 @@ export default {
     Content,
     ScrollView,
     GoBackTitle
+  },
+  mounted() {
+    document.title = "Go Hawaii Tours - Mipxlate.io";
+    this.$ga.page("/work/gohawaiitours");
   }
 };
 </script>
