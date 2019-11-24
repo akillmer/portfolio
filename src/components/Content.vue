@@ -36,10 +36,10 @@
   }
 
   .content {
+    position: relative;
     z-index: 1;
-    position: absolute;
     line-height: 2em;
-    padding-right: inherit;
+    padding-bottom: 1em;
   }
 
   a {
@@ -59,6 +59,7 @@
   }
 
   h1 {
+    font-family: "Work Sans", sans-serif;
     display: inline-block;
     color: #fafafa;
     text-shadow: 2px 2px #e69a2a;
@@ -70,6 +71,7 @@
   }
 
   h2 {
+    font-family: "Work Sans", sans-serif;
     color: rgba(63, 63, 63, 0.9);
     padding-bottom: 0.5em;
     border-bottom: solid 1px rgba(63, 63, 63, 0.2);
@@ -80,10 +82,6 @@
       font-size: 1.4em;
       color: #333;
       opacity: 0.2;
-
-      @media #{$portrait} {
-        display: none;
-      }
     }
   }
 }
