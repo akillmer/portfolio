@@ -25,7 +25,12 @@ const routes = [
   {
     path: "/work",
     name: "work",
-    component: () => import(/* webpackChunkName: "work" */ "../views/Work.vue")
+    component: () => import(/* webpackChunkName: "work" */ "../views/Work/Index.vue")
+  },
+  {
+    path: "/work/gohawaiitours",
+    name: "gohawaiitours",
+    component: () => import(/* webpackChunkName: "gohawaiitours" */ "../views/Work/GoHawaiiTours.vue")
   },
   {
     path: "/contact",
