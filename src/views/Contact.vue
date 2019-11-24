@@ -328,7 +328,6 @@ export default {
         })
         .catch(err => {
           this.errorMessage = err;
-          console.error(err);
         });
     },
     validateEmail(email) {
