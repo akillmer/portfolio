@@ -1,11 +1,11 @@
 <template>
   <div class="about">
-    <DropTitle :img="require('../assets/About.png')" alt="About Me" />
+    <DropTitle :img="require('@/assets/About.png')" alt="About Me" />
     <div class="two-columns">
       <Content class="left-col" style="min-width:55%;">
         <h1>Andrew Killmer</h1>
         <p>
-          I was born in Seoul and since I've lived in many different places. My father was an in-demand engineer for IBM, so we traveled a lot.
+          I was born in Seoul and since then I've lived in many different places. My father was an in-demand engineer for IBM, so we traveled a lot.
           He's the guy that
           <a
             href="https://en.wikipedia.org/wiki/HotDog"
@@ -23,11 +23,8 @@
           instructor, sales, retail, and most recently culinary. This entire time I kept freelancing as a developer. Basically, my
           <em>day jobs</em> were a distraction.
         </p>
-        <p>Now I fully realize that what I've been doing passionately since I was a teenager is what I want to do for a living as an adult.</p>
-        <p>
-          If you don't think I'm too late then
-          <router-link to="/contact" alt="Contact me">get in touch</router-link>.
-        </p>
+        <p>Now, I fully realize that what I've been doing passionately since I was a teenager is what I want to do for a living as an adult.</p>If you don't think I'm too late then please,
+        <router-link to="/contact" alt="Contact me">get in touch</router-link>.
       </Content>
       <Content class="right-col side-portrait" accent="white">
         <div style="min-height:500px;"></div>

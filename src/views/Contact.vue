@@ -4,7 +4,7 @@
     <div class="two-columns">
       <div class="left-col">
         <Content>
-          <h1>I'm just an email away</h1>
+          <h1>Hit me up!</h1>
           <p>
             You can always contact me directly at
             <a
@@ -99,6 +99,7 @@
 
 <style lang="scss">
 @import "@/media.scss";
+@import "@/vars.scss";
 
 .contact {
   .locked {
@@ -106,6 +107,7 @@
   }
 
   input[type="text"] {
+    font-family: $font;
     display: inline-block;
     width: 100%;
     font-size: 1em;
@@ -153,7 +155,7 @@
   }
 
   textarea {
-    font-family: "Work Sans", sans-serif;
+    font-family: $font;
     position: relative;
     font-size: 1em;
     display: inline-block;

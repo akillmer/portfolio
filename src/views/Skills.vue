@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <DropTitle :img="require('../assets/Skills.png')" alt="My Skills" />
+    <DropTitle :img="require('@/assets/Skills.png')" alt="My Skills" />
     <div class="two-columns">
       <div class="left-col" style="min-width:50%;">
         <Content :sequence="0" accent="white">
@@ -159,7 +159,7 @@
               <i class="fas fa-database" style="color:#C9872B;"></i> MySQL, NoSQL
             </li>
             <li>
-              <img src="../assets/skills/go.png" /> Go
+              <img src="@/assets/skills/go.png" /> Go
             </li>
             <li>
               <i class="fab fa-php" style="color:#8892BF;"></i> PHP

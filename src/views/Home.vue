@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <DropTitle :img="require('../assets/Aloha.png')" alt="Aloha, I'm Andy" />
+    <DropTitle :img="require('@/assets/Aloha.png')" alt="Aloha, I'm Andy" />
     <Content class="intro" :sequence="0">
       <h1>I'm a full-stack developer from ʻAiea, Hawaiʻi</h1>
       <div class="profile-image">
-        <img src="../assets/home/profile-picture.jpg" />
+        <img src="@/assets/home/profile-picture.jpg" />
       </div>
       <p>
         <strong>Aloha</strong>, my name's Andy and I like to call myself a
@@ -37,7 +37,7 @@
           Riptide, client and server
           <i class="fab fa-react"></i>
         </h2>
-        <img src="../assets/home/riptide.jpg" alt="Riptide client built with React" />
+        <img src="@/assets/home/riptide.jpg" alt="Riptide client built with React" />
         <p>
           Nearly three years ago I created
           <strong>Riptide</strong>, my very first non-trivial project with React. It's a web app that lets you
