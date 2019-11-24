@@ -3,9 +3,9 @@
     <DropTitle :img="require('@/assets/Aloha.png')" alt="Aloha, I'm Andy" />
     <Content class="intro" :sequence="0">
       <h1>I'm a full-stack developer from ʻAiea, Hawaiʻi</h1>
-      <div class="profile-image">
+      <!--<div class="profile-image">
         <img src="@/assets/home/profile-picture.jpg" />
-      </div>
+      </div>-->
       <p>
         <strong>Aloha</strong>, my name's Andy and I like to call myself a
         <span class="strike">full-stack</span> mix-plate developer.
