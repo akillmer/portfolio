@@ -9,6 +9,7 @@
 
 <style lang="scss">
 @import "@/media.scss";
+@import "@/vars.scss";
 
 html {
   overflow-y: scroll;
@@ -17,7 +18,7 @@ html {
 body {
   background-image: url("./assets/background.png");
   background-attachment: fixed;
-  font-family: "Public Sans", sans-serif;
+  font-family: $font;
   font-size: 1.1em;
   color: #524328;
   margin: 5em 0 8em 0;
