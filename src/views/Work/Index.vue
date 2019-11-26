@@ -36,14 +36,13 @@
             you can have full control over your torrents on your local network.
           </p>
           <p>
-            Client:
-            <a
-              href="https://github.com/akillmer/riptide-client"
-            >github.com/akillmer/riptide-client</a>
-            <br />Server:
-            <a
-              href="https://github.com/akillmer/riptide-server"
-            >github.com/akillmer/riptide-server</a>
+            <strong>Client</strong>
+            <br />
+            <a href="https://github.com/akillmer/riptide-client">github.com/akillmer/riptide-client</a>
+            <br />
+            <strong>Server</strong>
+            <br />
+            <a href="https://github.com/akillmer/riptide-server">github.com/akillmer/riptide-server</a>
           </p>
         </Content>
       </div>
@@ -62,11 +61,12 @@
             form uses a Google Cloud function, written in Go, to email all posted messages to me directly.
           </p>
           <p>
-            Website repo:
-            <a
-              href="https://github.com/akillmer/portfolio/"
-            >github.com/akillmer/portfolio</a>
-            <br />Cloudmail:
+            <strong>Website</strong>
+            <br />
+            <a href="https://github.com/akillmer/portfolio/">github.com/akillmer/portfolio</a>
+            <br />
+            <strong>Cloudmail</strong>
+            <br />
             <a href="https://github.com/akillmer/cloudmail/">github.com/akillmer/cloudmail</a>
           </p>
         </Content>
