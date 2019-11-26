@@ -32,13 +32,12 @@
           all desktop traffic by over 20%. I also coded specific Analytic events to better track user
           interaction while on this page.
         </p>
-        <p>
+        <p class="on-mobile">
           You can check the
           <a
             href="https://www2.gohawaiitours.com/landing/hidden-gems"
             alt="Hidden Gems Mobile Landing"
-          >mobile landing page here</a>. But note that it was only designed for mobile, so please
-          resize your window accordingly.
+          >mobile landing page here</a>.
         </p>
       </Content>
       <Content class="right-col" accent="white" :sequence="0.5">
@@ -105,6 +104,14 @@
   .desc {
     min-width: 50%;
     margin-bottom: 0;
+  }
+
+  .on-mobile {
+    display: none;
+
+    @media (hover: none), (hover: on-demand) {
+      display: block;
+    }
   }
 }
 </style>
