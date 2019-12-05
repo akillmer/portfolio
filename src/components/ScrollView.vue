@@ -20,25 +20,25 @@
 
 <script>
 export default {
-  name: "ScrollView",
+  name: 'ScrollView',
   props: {
     img: String,
     width: String
   },
   mounted() {
     if (this.img !== undefined) {
-      let frameDoc = this.$refs[this.id].contentWindow.document;
-      frameDoc.open();
+      let frameDoc = this.$refs[this.id].contentWindow.document
+      frameDoc.open()
       frameDoc.write(
         `<body style="margin:0"><img src="${this.img}" style="width:100%;"/></body>`
-      );
-      frameDoc.close();
+      )
+      frameDoc.close()
     }
   },
   computed: {
     id() {
-      return `${this._uid}_frame`;
+      return `${this._uid}_frame`
     }
   }
-};
+}
 </script>

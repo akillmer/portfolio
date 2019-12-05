@@ -1,7 +1,11 @@
 <template>
   <div class="container" :style="bgColor + boxShadow + expandedStyle">
     <div
-      :class="{ content: true, fade: showContent, 'white-theme': (accent === 'white') }"
+      :class="{
+        content: true,
+        fade: showContent,
+        'white-theme': accent === 'white'
+      }"
       :ref="contentRef"
     >
       <slot />
@@ -10,7 +14,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/media.scss";
+@import '@/media.scss';
 
 .container {
   position: relative;
@@ -86,19 +90,19 @@
 </style>
 
 <script>
-import Reveal from "@/mixins/Reveal";
-import BoxShadow from "@/BoxShadow";
+import Reveal from '@/mixins/Reveal'
+import BoxShadow from '@/BoxShadow'
 
 export default {
-  name: "Content",
+  name: 'Content',
   mixins: [Reveal],
   props: {
     sequence: Number,
     accent: {
       type: String,
-      default: "orange",
+      default: 'orange',
       validator(value) {
-        return ["orange", "white"].indexOf(value) !== -1;
+        return ['orange', 'white'].indexOf(value) !== -1
       }
     }
   },
@@ -107,16 +111,16 @@ export default {
     // listening to window load events wont work since that only happens once with an app.
     // and setting up from mounted() won't work since the DOM isn't fully updated yet.
     if (!this.loaded) {
-      window.addEventListener("resize", this.updateBoxSizes);
+      window.addEventListener('resize', this.updateBoxSizes)
       window.setTimeout(() => {
-        this.showContent = true;
-        this.updateBoxSizes();
-      }, this.sequence * 1250);
-      this.loaded = true;
+        this.showContent = true
+        this.updateBoxSizes()
+      }, this.sequence * 1250)
+      this.loaded = true
     }
   },
   beforeDestroy() {
-    window.removeEventListener("resize", this.updateBoxSizes);
+    window.removeEventListener('resize', this.updateBoxSizes)
   },
   data() {
     return {
@@ -124,7 +128,7 @@ export default {
       showContent: false,
       height: 1,
       contentRef: `${this._uid}_content`
-    };
+    }
   },
   computed: {
     expandedStyle() {
@@ -133,33 +137,33 @@ export default {
         return `visibility: visible;
           height: ${this.height}px;
           padding-top: 18px; 
-          padding-bottom: 18px;`;
+          padding-bottom: 18px;`
       else if (!this.isRevealed && this.showContent) {
         // exit animation state
         return `margin-bottom: ${this.height +
           /* padding: */ 36 +
-          /* margin: */ 54}px`;
+          /* margin: */ 54}px`
       }
 
-      return "";
+      return ''
     },
     bgColor() {
-      let color = this.accent === "orange" ? "#f8cf82;" : "#fff";
-      return `background-color: ${color};`;
+      let color = this.accent === 'orange' ? '#f8cf82;' : '#fff'
+      return `background-color: ${color};`
     },
     boxShadow() {
-      let orangeColor = "#e69a2a";
-      let whiteColor = "#d9e8f5";
+      let orangeColor = '#e69a2a'
+      let whiteColor = '#d9e8f5'
       // this also sets the border color because its used on mobile instead of box shadow
-      return this.accent === "orange"
+      return this.accent === 'orange'
         ? `border-color: ${orangeColor}; ${BoxShadow(orangeColor, 20)}`
-        : `border-color: ${whiteColor}; ${BoxShadow(whiteColor, 20)}`;
+        : `border-color: ${whiteColor}; ${BoxShadow(whiteColor, 20)}`
     }
   },
   methods: {
     updateBoxSizes() {
-      this.height = this.$refs[this.contentRef].clientHeight;
+      this.height = this.$refs[this.contentRef].clientHeight
     }
   }
-};
+}
 </script>

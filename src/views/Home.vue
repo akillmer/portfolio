@@ -8,23 +8,19 @@
       </div>-->
       <p>
         <strong>Aloha</strong>, my name's Andy and I like to call myself a
-        <span class="strike">full-stack</span> mix-plate developer.
-        I started with
-        <span class="skill">HTML</span> in 1995 when I was ten and I haven't stopped learning since.
-        Some of my skills now include
-        <span
-          class="skill"
-        >Vue.js</span>,
-        <span class="skill">React</span>,
+        <span class="strike">full-stack</span> mix-plate developer. I started
+        with <span class="skill">HTML</span> in 1995 when I was ten and I
+        haven't stopped learning since. Some of my skills now include
+        <span class="skill">Vue.js</span>, <span class="skill">React</span>,
         <span class="skill">Golang</span>, and even Kardashian-grade
         <span class="skill">Photoshopping</span>.
       </p>
       <p>
-        I actively freelance but I'm now looking for a team to join. I really believe Hawaiʻi
-        could greatly benefit from a strong tech scene and I would love to be a part of that.
-        Check out which
-        <router-link to="/skills">skills</router-link>&nbsp;I offer and some of my
-        <router-link to="/work">previous work</router-link>, too.
+        I actively freelance but I'm now looking for a team to join. I really
+        believe Hawaiʻi could greatly benefit from a strong tech scene and I
+        would love to be a part of that. Check out which
+        <router-link to="/skills">skills</router-link>&nbsp;I offer and some of
+        my <router-link to="/work">previous work</router-link>, too.
       </p>
       <p>
         I look forward to getting
@@ -37,20 +33,26 @@
           Riptide, client and server
           <i class="fab fa-react"></i>
         </h2>
-        <img src="@/assets/home/riptide.jpg" alt="Riptide client built with React" />
+        <img
+          src="@/assets/home/riptide.jpg"
+          alt="Riptide client built with React"
+        />
         <p>
           Nearly three years ago I created
-          <strong>Riptide</strong>, my very first non-trivial project with React. It's a web app that lets you
-          remotely manage your torrents. The
+          <strong>Riptide</strong>, my very first non-trivial project with
+          React. It's a web app that lets you remotely manage your torrents. The
           <a
             href="https://github.com/akillmer/riptide-client"
             alt="Riptide Client repo"
-          >client</a>
+            >client</a
+          >
           was developed with React and the
           <a
             href="https://github.com/akillmer/riptide-server"
             alt="Riptide Server repo"
-          >server</a> with Go.
+            >server</a
+          >
+          with Go.
         </p>
         <p>
           To learn more check out my latest
@@ -65,15 +67,14 @@
           </h2>
           <p>
             Check out my repositories over at
-            <a
-              href="https://github.com/akillmer"
-              alt="github.com/akillmer"
-            >my GitHub profile</a>.
-            There's an even a
+            <a href="https://github.com/akillmer" alt="github.com/akillmer"
+              >my GitHub profile</a
+            >. There's an even a
             <a
               href="https://github.com/akillmer/portfolio"
               alt="This website's repo"
-            >repository for this website</a>, built with Vue.js and SCSS.
+              >repository for this website</a
+            >, built with Vue.js and SCSS.
           </p>
         </Content>
         <Content :sequence="2.2">
@@ -92,7 +93,7 @@
 </template>
 
 <style lang="scss">
-@import "@/media.scss";
+@import '@/media.scss';
 
 .home {
   .strike {
@@ -109,7 +110,7 @@
     position: relative;
 
     &:before {
-      content: "";
+      content: '';
       clip-path: circle(50% at center);
       background-color: rgba(255, 255, 255, 0.5);
       width: 300px;
@@ -147,18 +148,18 @@
 </style>
 
 <script>
-import Content from "@/components/Content";
-import DropTitle from "@/components/DropTitle";
+import Content from '@/components/Content'
+import DropTitle from '@/components/DropTitle'
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     Content,
     DropTitle
   },
   mounted() {
-    document.title = "Andrew Killmer's Portfolio - Mixplate.io";
-    this.$ga.page("/");
+    document.title = "Andrew Killmer's Portfolio - Mixplate.io"
+    this.$ga.page('/')
   }
-};
+}
 </script>

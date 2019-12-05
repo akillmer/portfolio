@@ -7,7 +7,7 @@
 </template>
 
 <style lang="scss">
-@import "@/media.scss";
+@import '@/media.scss';
 
 .drop-title {
   z-index: 1;
@@ -40,10 +40,10 @@
 </style>
 
 <script>
-import Reveal from "@/mixins/Reveal";
+import Reveal from '@/mixins/Reveal'
 
 export default {
-  name: "DropTitle",
+  name: 'DropTitle',
   mixins: [Reveal],
   props: {
     img: {
@@ -55,5 +55,5 @@ export default {
       required: true
     }
   }
-};
+}
 </script>

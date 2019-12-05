@@ -1,58 +1,61 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "home",
+    path: '/',
+    name: 'home',
+    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
+  },
+  {
+    path: '/about',
+    name: 'about',
     component: () =>
-      import(/* webpackChunkName: "home" */ "../views/Home.vue")
+      import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: "/about",
-    name: "about",
+    path: '/skills',
+    name: 'skills',
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+      import(/* webpackChunkName: "skills" */ '../views/Skills.vue')
   },
   {
-    path: "/skills",
-    name: "skills",
+    path: '/work',
+    name: 'work',
     component: () =>
-      import(/* webpackChunkName: "skills" */ "../views/Skills.vue")
+      import(/* webpackChunkName: "work" */ '../views/Work/Index.vue')
   },
   {
-    path: "/work",
-    name: "work",
-    component: () => import(/* webpackChunkName: "work" */ "../views/Work/Index.vue")
-  },
-  {
-    path: "/work/gohawaiitours",
-    name: "gohawaiitours",
-    component: () => import(/* webpackChunkName: "gohawaiitours" */ "../views/Work/GoHawaiiTours.vue")
-  },
-  {
-    path: "/contact",
-    name: "contact",
+    path: '/work/gohawaiitours',
+    name: 'gohawaiitours',
     component: () =>
-      import(/* webpackChunkName: "contact" */ "../views/Contact.vue")
+      import(
+        /* webpackChunkName: "gohawaiitours" */ '../views/Work/GoHawaiiTours.vue'
+      )
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () =>
+      import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
   }
-];
+]
 
 const router = new VueRouter({
-  mode: "hash",
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
-});
+})
 
 router.beforeEach((to, from, next) => {
-  if (from.name === null) next();
+  if (from.name === null) next()
   else {
     // give the page some time to commit exit animations
-    router.app.$emit("route-change");
-    window.setTimeout(() => next(), 1000);
+    router.app.$emit('route-change')
+    window.setTimeout(() => next(), 1000)
   }
-});
+})
 
-export default router;
+export default router

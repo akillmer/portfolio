@@ -7,10 +7,10 @@
           <h1>Hit me up!</h1>
           <p>
             You can always contact me directly at
-            <a
-              href="mailto:andy@mixplate.io"
-              alt="andy@mixplate.io"
-            >andy@mixplate.io</a>, but I'd prefer if you used my handy dandy contact form. Because, you know, reasons.
+            <a href="mailto:andy@mixplate.io" alt="andy@mixplate.io"
+              >andy@mixplate.io</a
+            >, but I'd prefer if you used my handy dandy contact form. Because,
+            you know, reasons.
           </p>
         </Content>
         <Content accent="white">
@@ -19,11 +19,11 @@
             <i class="fas fa-cloud"></i>
           </h2>
           <p>
-            Check out my Google Cloud Function that handles these messages over at
-            <a
-              href="https://github.com/akillmer/cloudmail"
-              alt="cloudmail repo"
-            >github.com/akillmer/cloudmail</a>.
+            Check out my Google Cloud Function that handles these messages over
+            at
+            <a href="https://github.com/akillmer/cloudmail" alt="cloudmail repo"
+              >github.com/akillmer/cloudmail</a
+            >.
           </p>
         </Content>
       </div>
@@ -62,7 +62,7 @@
           </label>
           <textarea
             v-model="message"
-            :class="{'missing-message': !validMessage}"
+            :class="{ 'missing-message': !validMessage }"
             :disabled="isSending || success"
             :placeholder="messagePlaceholder"
             maxlength="500"
@@ -71,22 +71,37 @@
             v-if="validRecaptcha && !hasError && !success"
             @click="sendMessage"
             :disabled="!canSend"
-          >Send Message</button>
+          >
+            Send Message
+          </button>
           <vue-recaptcha
             v-if="!success"
-            :class="{ 'recaptcha': true, 'hide-recaptcha': validRecaptcha || isSending || hasError }"
+            :class="{
+              recaptcha: true,
+              'hide-recaptcha': validRecaptcha || isSending || hasError
+            }"
             :sitekey="sitekey"
             ref="recaptcha"
             @verify="onVerify"
             @expired="onExpired"
           />
-          <i v-if="isSending && !hasError" class="fas fa-cloud-upload-alt sending"></i>
+          <i
+            v-if="isSending && !hasError"
+            class="fas fa-cloud-upload-alt sending"
+          ></i>
         </p>
-        <p v-if="success" class="thanks">Thanks for your message! I'll get back to you ASAP.</p>
+        <p v-if="success" class="thanks">
+          Thanks for your message! I'll get back to you ASAP.
+        </p>
         <p v-else-if="hasError" class="error">
           Uh oh, please
-          <a style="cursor:pointer;" @click="tryAgain" alt="try again">try again</a> or email me at
-          <a href="mailto:andy@mixplate.io" alt="andy@mixplate.io">andy@mixplate.io</a>.
+          <a style="cursor:pointer;" @click="tryAgain" alt="try again"
+            >try again</a
+          >
+          or email me at
+          <a href="mailto:andy@mixplate.io" alt="andy@mixplate.io"
+            >andy@mixplate.io</a
+          >.
           <span>
             <i class="fas fa-exclamation-circle"></i>
             {{ errorMessage }}
@@ -98,15 +113,15 @@
 </template>
 
 <style lang="scss">
-@import "@/media.scss";
-@import "@/vars.scss";
+@import '@/media.scss';
+@import '@/vars.scss';
 
 .contact {
   .locked {
     opacity: 0.5;
   }
 
-  input[type="text"] {
+  input[type='text'] {
     font-family: $font;
     display: inline-block;
     width: 100%;
@@ -246,52 +261,52 @@
 </style>
 
 <script>
-import Content from "@/components/Content";
-import DropTitle from "@/components/DropTitle";
-import VueRecaptcha from "vue-recaptcha";
-import axios from "axios";
+import Content from '@/components/Content'
+import DropTitle from '@/components/DropTitle'
+import VueRecaptcha from 'vue-recaptcha'
+import axios from 'axios'
 
 export default {
-  name: "Contact",
+  name: 'Contact',
   components: {
     Content,
     DropTitle,
     VueRecaptcha
   },
   mounted() {
-    document.title = "Contact - Mixplate.io";
-    this.$ga.page("/contact");
+    document.title = 'Contact - Mixplate.io'
+    this.$ga.page('/contact')
   },
   data() {
     return {
-      sitekey: "6Lef1sMUAAAAAHxAJ7M_chloXQNSR3h-O43WMa_H",
+      sitekey: '6Lef1sMUAAAAAHxAJ7M_chloXQNSR3h-O43WMa_H',
       recaptchaResp: undefined,
       errorMessage: undefined,
       success: false,
       isSending: false,
-      fromName: "",
-      replyTo: "",
-      message: ""
-    };
+      fromName: '',
+      replyTo: '',
+      message: ''
+    }
   },
   computed: {
     // until the recaptcha is valid all the fields are validated as true, so their default icons
     // stay the same. after the user confirms they're not a robot is when the fields are validated,
     // and will update the UI if there's any errors.
     validName() {
-      return !this.validRecaptcha || this.fromName.trim().length > 0;
+      return !this.validRecaptcha || this.fromName.trim().length > 0
     },
     validEmail() {
-      return !this.validRecaptcha || this.validateEmail(this.replyTo);
+      return !this.validRecaptcha || this.validateEmail(this.replyTo)
     },
     validMessage() {
-      return !this.validRecaptcha || this.message.trim().length > 0;
+      return !this.validRecaptcha || this.message.trim().length > 0
     },
     validRecaptcha() {
-      return this.recaptchaResp !== undefined;
+      return this.recaptchaResp !== undefined
     },
     messagePlaceholder() {
-      return this.validRecaptcha ? "What's on your mind?" : "Hello, there...";
+      return this.validRecaptcha ? "What's on your mind?" : 'Hello, there...'
     },
     canSend() {
       return (
@@ -300,47 +315,47 @@ export default {
         this.validName &&
         this.validEmail &&
         this.validMessage
-      );
+      )
     },
     hasError() {
-      return this.errorMessage !== undefined;
+      return this.errorMessage !== undefined
     }
   },
   methods: {
     onVerify(resp) {
-      this.recaptchaResp = resp;
+      this.recaptchaResp = resp
     },
     onExpired() {
-      this.recaptchaResp = undefined;
+      this.recaptchaResp = undefined
     },
     sendMessage() {
-      this.isSending = true;
+      this.isSending = true
       axios
-        .post("https://us-central1-mixplate.cloudfunctions.net/cloudmail", {
+        .post('https://us-central1-mixplate.cloudfunctions.net/cloudmail', {
           recaptcha: this.recaptchaResp,
           name: this.fromName,
           replyTo: this.replyTo,
           message: this.message
         })
         .then(data => {
-          this.success = data.status === 200;
-          this.isSending = false;
+          this.success = data.status === 200
+          this.isSending = false
         })
         .catch(err => {
-          this.errorMessage = err;
-        });
+          this.errorMessage = err
+        })
     },
     validateEmail(email) {
       // eslint-disable-next-line no-useless-escape
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(email).toLowerCase());
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return re.test(String(email).toLowerCase())
     },
     tryAgain() {
-      this.recaptchaResp = undefined;
-      this.isSending = false;
-      this.errorMessage = undefined;
-      this.success = false;
+      this.recaptchaResp = undefined
+      this.isSending = false
+      this.errorMessage = undefined
+      this.success = false
     }
   }
-};
+}
 </script>

@@ -8,15 +8,15 @@
 </template>
 
 <style lang="scss">
-@import "@/media.scss";
-@import "@/vars.scss";
+@import '@/media.scss';
+@import '@/vars.scss';
 
 html {
   overflow-y: scroll;
 }
 
 body {
-  background-image: url("./assets/background.png");
+  background-image: url('./assets/background.png');
   background-attachment: fixed;
   font-family: $font;
   font-size: 1.1em;
@@ -92,10 +92,10 @@ a i {
 </style>
 
 <script>
-import NavMenu from "@/components/NavMenu";
+import NavMenu from '@/components/NavMenu'
 
 export default {
-  name: "App",
+  name: 'App',
   components: { NavMenu }
-};
+}
 </script>

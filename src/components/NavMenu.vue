@@ -1,7 +1,11 @@
 <template>
   <div id="nav" ref="nav" :class="{ expand: isExpanded }">
-    <div :class="{'touch-tab': !isExpanded}" @click="toggleMenu"></div>
-    <div :class="{ overlay: isExpanded }" ref="overlay" @click="toggleMenu"></div>
+    <div :class="{ 'touch-tab': !isExpanded }" @click="toggleMenu"></div>
+    <div
+      :class="{ overlay: isExpanded }"
+      ref="overlay"
+      @click="toggleMenu"
+    ></div>
     <ul>
       <router-link :style="boxShadowStyle" to="/" alt="Home">
         <li @click="hideMenu">
@@ -33,7 +37,7 @@
 </template>
 
 <style lang="scss">
-@import "@/media.scss";
+@import '@/media.scss';
 
 .expand {
   left: -24px !important;
@@ -139,32 +143,32 @@
 </style>
 
 <script>
-import BoxShadow from "@/BoxShadow";
+import BoxShadow from '@/BoxShadow'
 
 export default {
-  name: "NavMenu",
+  name: 'NavMenu',
   data() {
     return {
       isExpanded: false
-    };
+    }
   },
   mounted() {
-    this.$refs.overlay.addEventListener("touchstart", this.hideMenu);
+    this.$refs.overlay.addEventListener('touchstart', this.hideMenu)
   },
   computed: {
     boxShadowStyle() {
-      return BoxShadow("#91BED4", 10);
+      return BoxShadow('#91BED4', 10)
     }
   },
   methods: {
     toggleMenu() {
-      let bounds = this.$refs.nav.getBoundingClientRect();
-      this.isExpanded = !this.isExpanded && bounds.x < -24;
+      let bounds = this.$refs.nav.getBoundingClientRect()
+      this.isExpanded = !this.isExpanded && bounds.x < -24
       // when expanded (left: -24px)
     },
     hideMenu() {
-      this.isExpanded = false;
+      this.isExpanded = false
     }
   }
-};
+}
 </script>

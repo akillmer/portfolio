@@ -13,8 +13,9 @@
             <span>Google Cloud</span>
           </p>
           <p>
-            A tour company based out of Waikiki. I've provided graphic design, web development,
-            and created marketing campaigns for them since September 2019.
+            A tour company based out of Waikiki. I've provided graphic design,
+            web development, and created marketing campaigns for them since
+            September 2019.
           </p>
           <p class="see-more">
             <router-link to="/work/gohawaiitours">
@@ -32,17 +33,21 @@
             <span>BoltDB</span>
           </p>
           <p>
-            With this app, along with the Riptide server,
-            you can have full control over your torrents on your local network.
+            With this app, along with the Riptide server, you can have full
+            control over your torrents on your local network.
           </p>
           <p>
             <strong>Client</strong>
             <br />
-            <a href="https://github.com/akillmer/riptide-client">github.com/akillmer/riptide-client</a>
+            <a href="https://github.com/akillmer/riptide-client"
+              >github.com/akillmer/riptide-client</a
+            >
             <br />
             <strong>Server</strong>
             <br />
-            <a href="https://github.com/akillmer/riptide-server">github.com/akillmer/riptide-server</a>
+            <a href="https://github.com/akillmer/riptide-server"
+              >github.com/akillmer/riptide-server</a
+            >
           </p>
         </Content>
       </div>
@@ -57,17 +62,22 @@
           </p>
           <p>
             This website was created using Vue.js with SCSS. The
-            <router-link to="/contact">contact</router-link>&nbsp;
-            form uses a Google Cloud function, written in Go, to email all posted messages to me directly.
+            <router-link to="/contact">contact</router-link>&nbsp; form uses a
+            Google Cloud function, written in Go, to email all posted messages
+            to me directly.
           </p>
           <p>
             <strong>Website</strong>
             <br />
-            <a href="https://github.com/akillmer/portfolio/">github.com/akillmer/portfolio</a>
+            <a href="https://github.com/akillmer/portfolio/"
+              >github.com/akillmer/portfolio</a
+            >
             <br />
             <strong>Cloudmail</strong>
             <br />
-            <a href="https://github.com/akillmer/cloudmail/">github.com/akillmer/cloudmail</a>
+            <a href="https://github.com/akillmer/cloudmail/"
+              >github.com/akillmer/cloudmail</a
+            >
           </p>
         </Content>
         <Content>
@@ -78,11 +88,11 @@
             <span>SEO</span>
           </p>
           <p>
-            I'm really passionate about 3D printing, so I started a blog all about it.
-            <a
-              href="https://www.handy3dprinting.com"
-            >Handy 3D Printing</a> is an experiment on
-            hacking at my own WordPress blog with a focus on SEO.
+            I'm really passionate about 3D printing, so I started a blog all
+            about it.
+            <a href="https://www.handy3dprinting.com">Handy 3D Printing</a> is
+            an experiment on hacking at my own WordPress blog with a focus on
+            SEO.
           </p>
         </Content>
       </div>
@@ -91,9 +101,7 @@
       <h2>GitHub</h2>
       <p>
         Check out my pinned repositories and more over at
-        <a
-          href="https://github.com/akillmer"
-        >my GitHub profile</a>.
+        <a href="https://github.com/akillmer">my GitHub profile</a>.
       </p>
     </Content>
   </div>
@@ -135,18 +143,18 @@
 </style>
 
 <script>
-import Content from "@/components/Content";
-import DropTitle from "@/components/DropTitle";
+import Content from '@/components/Content'
+import DropTitle from '@/components/DropTitle'
 
 export default {
-  name: "Work",
+  name: 'Work',
   components: {
     Content,
     DropTitle
   },
   mounted() {
-    document.title = "Work - Mixplate.io";
-    this.$ga.page("/work");
+    document.title = 'Work - Mixplate.io'
+    this.$ga.page('/work')
   }
-};
+}
 </script>

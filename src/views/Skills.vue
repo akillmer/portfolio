@@ -13,11 +13,10 @@
               <i class="fab fa-html5" style="color:#F16429;"></i>HTML, CSS
             </li>
             <li>
-              <i class="fab fa-node-js" style="color:#81C91E;"></i>JavaScript / Node.js
+              <i class="fab fa-node-js" style="color:#81C91E;"></i>JavaScript /
+              Node.js
             </li>
-            <li>
-              <i class="fab fa-react" style="color:#16AABF;"></i>React
-            </li>
+            <li><i class="fab fa-react" style="color:#16AABF;"></i>React</li>
             <li>
               <i class="fab fa-vuejs" style="color:#41B883;"></i>Vue.js, Nuxt.js
             </li>
@@ -26,8 +25,9 @@
             </li>
           </ul>
           <Note>
-            I pretty much stopped working with React since I started up with Vue.js, and this year
-            I started doing professional work with Nuxt.js.
+            I pretty much stopped working with React since I started up with
+            Vue.js, and this year I started doing professional work with
+            Nuxt.js.
           </Note>
         </Content>
 
@@ -85,14 +85,20 @@
                     d="M168.404,305.486h68.192l18.428,61.115h57.887l-73.885-238.312h-70.621L95.455,366.601h55.875L168.404,305.486z
 		 M201.199,168.546h0.693c3.505,14.264,26.966,96.545,26.966,96.545h-52.75C176.108,265.091,197.658,182.81,201.199,168.546z"
                   />
-                  <rect x="333.95" y="193.775" width="53.824" height="172.826" />
+                  <rect
+                    x="333.95"
+                    y="193.775"
+                    width="53.824"
+                    height="172.826"
+                  />
                   <path
                     d="M360.533,172.503c17.769,0,29.012-12.078,29.012-26.86c-0.415-15.583-11.243-27.244-28.595-27.244
 		c-17.352,0-28.735,11.66-28.353,27.244C332.215,160.425,343.598,172.503,360.533,172.503z"
                   />
                   <path d="M0,0v485h485V0H0z M455,455H30V30h425V455z" />
                 </g>
-              </svg> Illustrator
+              </svg>
+              Illustrator
             </li>
             <li>
               <svg
@@ -129,13 +135,12 @@
               </svg>
               Xd
             </li>
-            <li>
-              <i class="fab fa-sketch" style="color:#F6AE00;"></i> Sketch
-            </li>
+            <li><i class="fab fa-sketch" style="color:#F6AE00;"></i> Sketch</li>
           </ul>
           <Note>
-            I want to get better at Xd or Sketch, especially for when it's time to collaborate with others.
-            But Photoshop has always been my main tool for designing.
+            I want to get better at Xd or Sketch, especially for when it's time
+            to collaborate with others. But Photoshop has always been my main
+            tool for designing.
           </Note>
         </Content>
       </div>
@@ -156,17 +161,15 @@
               <i class="fab fa-google" style="color:#F8B801;"></i> Google Cloud
             </li>
             <li>
-              <i class="fas fa-database" style="color:#C9872B;"></i> MySQL, NoSQL
+              <i class="fas fa-database" style="color:#C9872B;"></i> MySQL,
+              NoSQL
             </li>
-            <li>
-              <img src="@/assets/skills/go.png" /> Go
-            </li>
-            <li>
-              <i class="fab fa-php" style="color:#8892BF;"></i> PHP
-            </li>
+            <li><img src="@/assets/skills/go.png" /> Go</li>
+            <li><i class="fab fa-php" style="color:#8892BF;"></i> PHP</li>
           </ul>
           <Note>
-            I'm comfortable with Node.js, PHP, and some Python for back end work, but Go has been my
+            I'm comfortable with Node.js, PHP, and some Python for back end
+            work, but Go has been my
             <em>go</em> to lately.
           </Note>
         </Content>
@@ -177,8 +180,10 @@
             <i class="fab fa-stack-overflow"></i>
           </h2>
           <p>
-            My strongest skill is finding answers quickly. I often rely on Google, and inevitably Stack Overflow,
-            to keep the ball rolling. I never shy from learning something new or finding a better way to do things.
+            My strongest skill is finding answers quickly. I often rely on
+            Google, and inevitably Stack Overflow, to keep the ball rolling. I
+            never shy from learning something new or finding a better way to do
+            things.
           </p>
         </Content>
       </div>
@@ -187,7 +192,7 @@
 </template>
 
 <style lang="scss">
-@import "@/media.scss";
+@import '@/media.scss';
 
 /* I created the Xd icon, it needed to be thicker to match the others */
 .xd-stroke {
@@ -267,20 +272,20 @@
 </style>
 
 <script>
-import Content from "@/components/Content";
-import DropTitle from "@/components/DropTitle";
-import Note from "@/components/Note";
+import Content from '@/components/Content'
+import DropTitle from '@/components/DropTitle'
+import Note from '@/components/Note'
 
 export default {
-  name: "Skills",
+  name: 'Skills',
   components: {
     Content,
     DropTitle,
     Note
   },
   mounted() {
-    document.title = "Skills - Mixplate.io";
-    this.$ga.page("/skills");
+    document.title = 'Skills - Mixplate.io'
+    this.$ga.page('/skills')
   }
-};
+}
 </script>

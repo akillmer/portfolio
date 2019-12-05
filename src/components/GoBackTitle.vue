@@ -10,7 +10,7 @@
 </template>
 
 <style lang="scss">
-@import "@/media.scss";
+@import '@/media.scss';
 
 .go-back-title {
   font-size: 2em;
@@ -49,10 +49,10 @@
 </style>
 
 <script>
-import Reveal from "@/mixins/Reveal";
+import Reveal from '@/mixins/Reveal'
 
 export default {
-  name: "GoBackTitle",
+  name: 'GoBackTitle',
   mixins: [Reveal],
   props: {
     url: {
@@ -60,5 +60,5 @@ export default {
       required: true
     }
   }
-};
+}
 </script>
