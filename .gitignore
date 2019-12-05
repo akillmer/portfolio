@@ -7,4 +7,4 @@ node_modules/
 src/_drafts
 package-lock.json
 dist
-resume.pdf
+*.pdf
