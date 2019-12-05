@@ -1,24 +1,6 @@
-# portfolio
+# # Andrew Killmer's Portfolio
 
-## Project setup
-```
-yarn install
-```
+This is the repository for my website at https://mixplate.io. The front end was created with Vue.js and SCSS. It's served as a SPA directly from a Google Cloud Storage Bucket. The contact form is powered by a Google CloudFunction that exposes an HTTP endpoint, visit https://github.com/akillmer/cloudmail for more.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Feedback wanted
+I'm always looking to improve my skills so I appreciate any and all feedback, thanks!
